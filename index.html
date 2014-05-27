@@ -32,29 +32,31 @@
       .byebyebye {
         visibility: hidden;
       }
-      
+
     </style>
   </head>
   <body>
     <h1>It's probably <span id="lols"><span id="dad" >nothing.</span><span id="wowmom"></span></span></h1>
     <script src="probably.js"></script>
     <script type="text/javascript">
-      window.setInterval(
+      (function () {
         function diagnose() {
           document.getElementById("wowmom").innerHTML = rand(probably) + ".";
           document.getElementById('dad').className = "byebyebye";
+          window.setTimeout(nah_nah_u_ok, 100);
+        }
 
-          function rand(array) {
-            return array[Math.floor(Math.random() * array.length)];
-          }
-        },
-      4000);
-      window.setInterval(
+        function rand(array) {
+          return array[Math.floor(Math.random() * array.length)];
+        }
+
         function nah_nah_u_ok() {
           document.getElementById("wowmom").innerHTML = "nothing.";
           document.getElementById('dad').className = "byebyebye";
-        },
-      4080);
+        }
+
+        window.setInterval(diagnose, 4000);
+      })();
     </script>
   </body>
 </html>
