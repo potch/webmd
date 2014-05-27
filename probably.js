@@ -3,5 +3,7 @@ window.probably = [
   "cancer",
   "potch",
   "swamp gas",
-  "jQuery"
+  "jQuery",
+  "clean sheets",
+  "botulism"
 ];
