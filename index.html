@@ -21,17 +21,30 @@
         transform: translate(0,-50%);
         -webkit-transform: translate(0,-50%);
       }
+      #lols {
+        position: relative;
+      }
+      #wowmom {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .byebyebye {
+        visibility: hidden;
+      }
+      
     </style>
   </head>
   <body>
-    <h1>It's probably <span id="dad">nothing</span>.</h1>
+    <h1>It's probably <span id="lols"><span id="dad" >nothing.</span><span id="wowmom"></span></span></h1>
     <script type="text/javascript">
       (function() {
         window.setTimeout(
           function diagnose() {
-            var terrible = ["lupus", "cancer", "potch", "jQuery"]
+            var terrible = ["lupus", "cancer", "potch", "jQuery"];
 
-            document.getElementById("dad").innerHTML = rand(terrible);
+            document.getElementById("wowmom").innerHTML = rand(terrible) + ".";
+            document.getElementById('dad').className = "byebyebye";
 
             function rand(array) {
               return array[Math.floor(Math.random() * array.length)];
