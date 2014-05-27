@@ -1,4 +1,5 @@
 window.probably = [
+  "botulism",
   "lupus",
   "cancer",
   "potch",
