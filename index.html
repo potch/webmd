@@ -39,7 +39,7 @@
     <h1>It's probably <span id="lols"><span id="dad" >nothing.</span><span id="wowmom"></span></span></h1>
     <script src="probably.js"></script>
     <script type="text/javascript">
-      window.setTimeout(
+      window.setInterval(
         function diagnose() {
           document.getElementById("wowmom").innerHTML = rand(probably) + ".";
           document.getElementById('dad').className = "byebyebye";
@@ -48,7 +48,13 @@
             return array[Math.floor(Math.random() * array.length)];
           }
         },
-      3000);
+      4000);
+      window.setInterval(
+        function nah_nah_u_ok() {
+          document.getElementById("wowmom").innerHTML = "nothing.";
+          document.getElementById('dad').className = "byebyebye";
+        },
+      4080);
     </script>
   </body>
 </html>
