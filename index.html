@@ -24,6 +24,21 @@
     </style>
   </head>
   <body>
-    <h1>It's probably nothing.</h1>
+    <h1>It's probably <span id="dad">nothing</span>.</h1>
+    <script type="text/javascript">
+      (function() {
+        window.setTimeout(
+          function diagnose() {
+            var terrible = ["lupus", "cancer","potch"]
+
+            document.getElementById("dad").innerHTML = rand(terrible);
+
+            function rand(array) {
+              return array[Math.floor(Math.random() * array.length)];
+            }
+          },
+        3000);
+      })();
+    </script>
   </body>
 </html>
